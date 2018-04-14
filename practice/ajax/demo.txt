@@ -1,0 +1,4 @@
+<div class="container">
+    <h4>[this is AJAX for JQuery]</h4>
+    <p>lorem is plus <kbd>Ctr + r</kbd> very fun</p>
+</div>

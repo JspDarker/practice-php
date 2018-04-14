@@ -25,7 +25,7 @@ $(function() {
 
     /**     CUSTOM VALIDATION FOR STYLE ME **/
 
-    $.validator.addMethod('strongPassword',function( value, element) {
+    $.validator.addMethod('strongPassword', function( value, element) {
         return this.optional(element)
         || /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/.test(value);
     },'min length 6 character of 1 letter and 1 number');
@@ -88,6 +88,16 @@ $(function() {
         }
 
     });
+    /** =============================================================== **/
+    // GET AJAX
+    $('#getAjax').on('click',function () {
+        $('.ajax-demo').load("../ajax/demo.txt");
+    });
+
+
+
+
+
     /*if($a){
         obj.show();
     } else {

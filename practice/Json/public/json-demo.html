@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This::JSON for AJAX</title>
+</head>
+<body>
+
+<div class="page-wrap container">
+    <h1>JSON Tutorial</h1>
+    <div id="pets-container"></div>
+</div>
+
+
+
+<script>
+    var person = {
+
+        "name": "Js storm",
+        age: 100,
+        address: {
+            city: "can tho city",
+            road: "22 street"
+        },
+        children: ["son", "girl", "boy"]
+        /*email: function() {
+            return "this@gmail.com"
+        }*/ //=> this wrong in JSON. not parse -> JSON
+
+    };
+    // person = JSON.stringify(person); // convert from JavaScript to JSON
+    // console.log(person); // JSON Object test-> console.log(person.name) -> return khong xac dinh
+
+    // convert from JSON -> JavaScript
+    // person = JSON.parse( person);
+
+
+    // console.log(person.children[1]);
+
+    /*var people = [
+        {
+            name: "this Dao",
+            age: 100
+        },
+        {
+            name: "this Time",
+            age:89
+        },
+        {
+            name: "this Rand",
+            age: 99
+        }
+    ];
+    console.log(people[1].name);*/
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            // Typical action to be performed when the document is ready:
+            //console.log(xhttp.responseText);
+            var ourRequest = JSON.parse(xhttp.responseText);
+            console.log(ourRequest);
+        }
+    };
+    xhttp.open("GET", "../demo1/file_json.json", true);
+    xhttp.send();
+
+
+
+</script>
+
+</body>
+</html>

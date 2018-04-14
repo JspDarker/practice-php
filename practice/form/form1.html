@@ -2,9 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Form:PHP in class</title>
+    <link rel="stylesheet" href="../../include/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../include/font-logo/fontawesome.min.css">
+    <link rel="shortcut icon" href="../../include/font-logo/logo/icon.png">
+    <style>
+        label.error{
+            color: red;
+            font-size: medium;
+        }
+    </style>
 </head>
 <body>
-$END$
+
+    <section id="register-user">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 bg-light">
+                    <h3 class="text-primary">Register</h3>
+                    <form action="validation.php" id="demoForm" method="post">
+                        <div class="form-group">
+                            <label class="font-weight-bold" for="name">Name</label>
+                            <input class="empty form-control my-style" type="text" id="name" name="name" placeholder="Enter name...">
+                            <span class="frm-error" id="nameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold" for="email">Email address</label>
+                            <input id="email" type="text" class="empty form-control" name="email" placeholder="Enter email...">
+                            <span class="frm-error" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold" for="password">Password</label>
+                            <input class="empty form-control" type="text" id="password" name="password" placeholder="password...">
+                            <span class="frm-error" id="passError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold" for="pass_confirm">Password confirm</label>
+                            <input class="empty form-control" type="text" id="pass_confirm" name="pass_confirm" placeholder="again password...">
+                            <span class="frm-error" id="passConfirmError"></span>
+                        </div>
+                        <button class="btn btn-primary text-warning font-weight-bold" id="register" type="submit" name="submit">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+<script src="../../include/jquery.js"></script>
+<script src="../../include/jquery.validate.min.js"></script>
+<script src="../../include/bootstrap.js"></script>
+<script src="valid-client.js"></script>
+
 </body>
 </html>
